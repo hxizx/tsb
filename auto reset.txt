@@ -1,7 +1,7 @@
 while true do
     task.wait(4)
     local player = game.Players.LocalPlayer
-    if player and player.Name ~= "RevWorkzz" and player.Character then
+    if player and player.Name ~= user and player.Character then
         local humanoid = player.Character:FindFirstChild("Humanoid")
         if humanoid then
             humanoid.Health = 0
