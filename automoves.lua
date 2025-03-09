@@ -33,7 +33,7 @@ end
 
 -- Start looping and triggering the move, only if player name matches
 while true do
-    if Player.Name == "RevWorkzz" then
+    if Player.Name == user then
         triggerConsoleMove()
     end
     wait(0) -- Delay before looping through tools again
