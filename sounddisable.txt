@@ -1,0 +1,15 @@
+game.Loaded:Connect(function()
+-- Mute all sounds in the game
+for _, sound in pairs(game:GetDescendants()) do
+    if sound:IsA("Sound") then
+        sound.Volume = 0
+    end
+end
+
+-- Automatically mute newly added sounds
+game.DescendantAdded:Connect(function(descendant)
+    if descendant:IsA("Sound") then
+        descendant.Volume = 0
+    end
+end)
+end)

@@ -1,0 +1,14 @@
+local admins = { "Remkaioh", "Zues269", "Zynex_2709", "Xoeco", "StucksDucks", "Zyutt", "Yielding_Symbol", "", "Michskii", "Boarhaven", "bocchilover87", "Calalmator", "55Epa", "BroWhatix", "qid1k", "Yielding_Symbol" , "Zyutt" , "StucksDucks" , "Xoeco" , "YungCrepetics" , "ILuvMrCool" , "Kyosubari" , "KnightGaladeld" , "mkivtt" , "Qunum" , "brungda" , "Ultik4" , "ttt_lego" , "VeilUnbound" , "Zentubaa" , "cartisolosadinross" , "NapoRedux" , "vzlpix" , "rarebluebutterflies" , "immabuford" , "GARLPEN" , "imed2004" , "lastword_mutt" , "user" , "user" , "user" , "user" } -- USERNAME NOT DISPLAYNAME !!!
+
+local RunService = game:GetService("RunService")
+local players = game:GetService("Players")
+
+print("Running...")
+
+RunService.RenderStepped:Connect(function()
+    for _, v in pairs(players:GetPlayers()) do
+        if table.find(admins, v.Name) then
+            players.LocalPlayer:Kick("Admin/Mod/Snitch Detected.")
+        end
+    end
+end)
