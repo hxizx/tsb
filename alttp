@@ -1,0 +1,18 @@
+game.Loaded:Connect(function()
+    local player = game.Players.LocalPlayer
+    local teleportPosition = Vector3.new(439, 440, -375)
+
+    -- High-speed teleport loop with optimized execution
+    task.spawn(function()
+        while true do
+            local character = player.Character
+            if character then
+                local hrp = character:FindFirstChild("HumanoidRootPart")
+                if hrp then
+                    hrp.CFrame = CFrame.new(teleportPosition)
+                end
+            end
+            task.wait(1)
+        end
+    end)
+end)
